@@ -1,0 +1,399 @@
+2025-02-19 19:42:13,514 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 19:42:13,514 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 19:42:13,515 - INFO -  * Restarting with stat
+2025-02-19 19:42:13,897 - WARNING -  * Debugger is active!
+2025-02-19 19:42:13,899 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 19:42:13,918 - WARNING - User 1 not found.
+2025-02-19 19:42:13,918 - INFO - 127.0.0.1 - - [19/Feb/2025 19:42:13] "[33mGET /users/1 HTTP/1.1[0m" 404 -
+2025-02-19 19:49:22,174 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 19:49:22,218 - INFO -  * Restarting with stat
+2025-02-19 19:49:22,601 - WARNING -  * Debugger is active!
+2025-02-19 19:49:22,603 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 19:53:48,175 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 19:53:48,175 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 19:53:48,176 - INFO -  * Restarting with stat
+2025-02-19 19:53:48,550 - WARNING -  * Debugger is active!
+2025-02-19 19:53:48,552 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 20:04:02,561 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 20:04:02,561 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 20:04:02,562 - INFO -  * Restarting with stat
+2025-02-19 20:04:02,945 - WARNING -  * Debugger is active!
+2025-02-19 20:04:02,947 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 20:04:13,374 - WARNING - User 1 not found.
+2025-02-19 20:04:13,375 - INFO - 127.0.0.1 - - [19/Feb/2025 20:04:13] "[33mGET /users/1 HTTP/1.1[0m" 404 -
+2025-02-19 20:04:35,633 - ERROR - Error in add_user route: name 'request' is not defined
+2025-02-19 20:04:35,634 - INFO - 127.0.0.1 - - [19/Feb/2025 20:04:35] "[35m[1mGET /add_user HTTP/1.1[0m" 500 -
+2025-02-19 20:05:29,860 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 20:05:29,910 - INFO -  * Restarting with stat
+2025-02-19 20:05:30,293 - WARNING -  * Debugger is active!
+2025-02-19 20:05:30,295 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 20:05:52,532 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 20:05:52,589 - INFO -  * Restarting with stat
+2025-02-19 20:11:10,033 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 20:11:10,033 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 20:11:10,033 - INFO -  * Restarting with stat
+2025-02-19 20:11:10,413 - WARNING -  * Debugger is active!
+2025-02-19 20:11:10,415 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 20:11:15,244 - INFO - 127.0.0.1 - - [19/Feb/2025 20:11:15] "GET /add_user HTTP/1.1" 200 -
+2025-02-19 20:11:25,174 - INFO - User 'Beltaine' added successfully.
+2025-02-19 20:11:25,175 - INFO - User 'Beltaine' added successfully.
+2025-02-19 20:11:25,175 - INFO - 127.0.0.1 - - [19/Feb/2025 20:11:25] "[32mPOST /add_user HTTP/1.1[0m" 302 -
+2025-02-19 20:11:25,181 - INFO - 127.0.0.1 - - [19/Feb/2025 20:11:25] "GET /users HTTP/1.1" 200 -
+2025-02-19 20:12:20,356 - INFO - 127.0.0.1 - - [19/Feb/2025 20:12:20] "GET /users/1 HTTP/1.1" 200 -
+2025-02-19 20:14:55,927 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 20:14:55,985 - INFO -  * Restarting with stat
+2025-02-19 21:18:04,185 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:18:04,185 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:18:04,186 - INFO -  * Restarting with stat
+2025-02-19 21:18:04,734 - WARNING -  * Debugger is active!
+2025-02-19 21:18:04,735 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:18:32,173 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:18:32,173 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:18:32,174 - INFO -  * Restarting with stat
+2025-02-19 21:18:32,726 - WARNING -  * Debugger is active!
+2025-02-19 21:18:32,727 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:19:14,587 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:19:14,587 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:19:14,587 - INFO -  * Restarting with stat
+2025-02-19 21:19:15,144 - WARNING -  * Debugger is active!
+2025-02-19 21:19:15,145 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:20:34,172 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:20:34,172 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:20:34,173 - INFO -  * Restarting with stat
+2025-02-19 21:20:34,777 - WARNING -  * Debugger is active!
+2025-02-19 21:20:34,779 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:20:44,874 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:20:44,874 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:22:33,099 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:22:33,099 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:22:33,099 - INFO -  * Restarting with stat
+2025-02-19 21:22:33,700 - WARNING -  * Debugger is active!
+2025-02-19 21:22:33,702 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:22:42,098 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:22:42,098 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:22:42,099 - INFO -  * Restarting with stat
+2025-02-19 21:22:42,665 - WARNING -  * Debugger is active!
+2025-02-19 21:22:42,666 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:23:06,068 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:23:06,105 - INFO -  * Restarting with stat
+2025-02-19 21:23:06,680 - WARNING -  * Debugger is active!
+2025-02-19 21:23:06,682 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:29:26,249 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:29:26,249 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:29:26,250 - INFO -  * Restarting with stat
+2025-02-19 21:29:26,811 - WARNING -  * Debugger is active!
+2025-02-19 21:29:26,813 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:36:01,400 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:36:01,400 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:36:01,401 - INFO -  * Restarting with stat
+2025-02-19 21:36:01,974 - WARNING -  * Debugger is active!
+2025-02-19 21:36:01,976 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:36:20,070 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:36:20,070 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:36:20,071 - INFO -  * Restarting with stat
+2025-02-19 21:36:20,635 - WARNING -  * Debugger is active!
+2025-02-19 21:36:20,637 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:37:08,285 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:37:08,350 - INFO -  * Restarting with stat
+2025-02-19 21:37:08,920 - WARNING -  * Debugger is active!
+2025-02-19 21:37:08,922 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:38:51,237 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:38:51,293 - INFO -  * Restarting with stat
+2025-02-19 21:38:51,856 - WARNING -  * Debugger is active!
+2025-02-19 21:38:51,857 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:40:13,895 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:40:13,895 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:40:13,895 - INFO -  * Restarting with stat
+2025-02-19 21:40:14,463 - WARNING -  * Debugger is active!
+2025-02-19 21:40:14,465 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:40:42,834 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:40:42,874 - INFO -  * Restarting with stat
+2025-02-19 21:40:43,461 - WARNING -  * Debugger is active!
+2025-02-19 21:40:43,463 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:41:00,645 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:41:00,645 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:41:00,645 - INFO -  * Restarting with stat
+2025-02-19 21:41:01,195 - WARNING -  * Debugger is active!
+2025-02-19 21:41:01,197 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:42:45,096 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:42:45,097 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:44:01,502 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:44:01,502 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:44:01,502 - INFO -  * Restarting with stat
+2025-02-19 21:44:02,070 - WARNING -  * Debugger is active!
+2025-02-19 21:44:02,071 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:44:21,484 - INFO - 127.0.0.1 - - [19/Feb/2025 21:44:21] "GET / HTTP/1.1" 200 -
+2025-02-19 21:44:28,942 - INFO - 127.0.0.1 - - [19/Feb/2025 21:44:28] "[33mGET /home HTTP/1.1[0m" 404 -
+2025-02-19 21:44:39,485 - INFO - 127.0.0.1 - - [19/Feb/2025 21:44:39] "GET /users HTTP/1.1" 200 -
+2025-02-19 21:44:43,994 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:44:43,994 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:44:43,994 - INFO -  * Restarting with stat
+2025-02-19 21:44:44,560 - WARNING -  * Debugger is active!
+2025-02-19 21:44:44,562 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:44:46,629 - INFO - 127.0.0.1 - - [19/Feb/2025 21:44:46] "GET /users HTTP/1.1" 200 -
+2025-02-19 21:44:47,968 - INFO - 127.0.0.1 - - [19/Feb/2025 21:44:47] "GET /users HTTP/1.1" 200 -
+2025-02-19 21:45:28,132 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:45:28,132 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:46:08,974 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:46:08,974 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:46:08,975 - INFO -  * Restarting with stat
+2025-02-19 21:46:09,528 - WARNING -  * Debugger is active!
+2025-02-19 21:46:09,530 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:46:42,146 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:46:42,146 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:49:51,392 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:49:51,392 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:49:51,392 - INFO -  * Restarting with stat
+2025-02-19 21:49:51,942 - WARNING -  * Debugger is active!
+2025-02-19 21:49:51,943 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:54:14,756 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:54:14,808 - INFO -  * Restarting with stat
+2025-02-19 21:54:23,055 - INFO -  * Restarting with stat
+2025-02-19 21:54:32,314 - INFO -  * Restarting with stat
+2025-02-19 21:54:38,805 - INFO -  * Restarting with stat
+2025-02-19 21:54:47,530 - INFO -  * Restarting with stat
+2025-02-19 21:54:48,096 - WARNING -  * Debugger is active!
+2025-02-19 21:54:48,098 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:55:40,839 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:55:40,900 - INFO -  * Restarting with stat
+2025-02-19 21:55:40,948 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 21:55:40,948 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:55:40,949 - INFO -  * Restarting with stat
+2025-02-19 21:55:41,497 - WARNING -  * Debugger is active!
+2025-02-19 21:55:41,499 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:55:41,550 - WARNING -  * Debugger is active!
+2025-02-19 21:55:41,552 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:56:20,145 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:56:20,154 - INFO -  * Detected change in 'C:\\Users\\Lea\\Documents\\CODE\\CODIO\\movie-project-web\\app.py', reloading
+2025-02-19 21:56:20,200 - INFO -  * Restarting with stat
+2025-02-19 21:56:20,213 - INFO -  * Restarting with stat
+2025-02-19 21:56:20,810 - WARNING -  * Debugger is active!
+2025-02-19 21:56:20,812 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:56:20,813 - WARNING -  * Debugger is active!
+2025-02-19 21:56:20,815 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 21:56:46,474 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:56:46,474 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:57:15,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:57:15,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 21:57:33,114 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 21:57:33,114 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:03:30,312 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:03:30,312 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:03:51,859 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:03:51,859 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:04:01,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:04:01,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:06:54,311 - INFO - \u2705 Logging is fully enabled!
+2025-02-19 22:07:11,343 - INFO - \u2705 Logging is fully enabled!
+2025-02-19 22:07:11,370 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:07:11,370 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:07:38,691 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:07:38,691 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:10:23,139 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:10:23,140 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:12:15,012 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:12:15,012 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:12:38,997 - INFO - Logging is fully enabled!
+2025-02-19 22:12:39,039 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-02-19 22:12:39,039 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:14:02,572 - INFO - Logging is fully enabled!
+2025-02-19 22:14:02,596 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:14:02,596 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:14:02,597 - INFO -  * Restarting with stat
+2025-02-19 22:14:03,126 - INFO - Logging is fully enabled!
+2025-02-19 22:14:03,147 - WARNING -  * Debugger is active!
+2025-02-19 22:14:03,148 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 22:15:04,467 - INFO - Logging is fully enabled!
+2025-02-19 22:15:04,492 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:15:04,493 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:15:04,493 - INFO -  * Restarting with stat
+2025-02-19 22:15:05,027 - INFO - Logging is fully enabled!
+2025-02-19 22:15:05,047 - WARNING -  * Debugger is active!
+2025-02-19 22:15:05,049 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 22:16:19,647 - INFO - Logging is fully enabled!
+2025-02-19 22:16:19,671 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:16:19,671 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:16:19,672 - INFO -  * Restarting with stat
+2025-02-19 22:16:20,209 - INFO - Logging is fully enabled!
+2025-02-19 22:16:20,230 - WARNING -  * Debugger is active!
+2025-02-19 22:16:20,232 - INFO -  * Debugger PIN: 140-018-835
+2025-02-19 22:18:06,557 - INFO - Logging is fully enabled!
+2025-02-19 22:18:06,577 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:18:06,577 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:18:28,120 - INFO - Logging is fully enabled!
+2025-02-19 22:18:28,145 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:18:28,145 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:18:43,588 - INFO - Logging is fully enabled!
+2025-02-19 22:18:43,613 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:18:43,613 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:19:06,188 - INFO - 127.0.0.1 - - [19/Feb/2025 22:19:06] "GET / HTTP/1.1" 200 -
+2025-02-19 22:19:11,082 - INFO - 127.0.0.1 - - [19/Feb/2025 22:19:11] "GET /users HTTP/1.1" 200 -
+2025-02-19 22:19:12,660 - INFO - 127.0.0.1 - - [19/Feb/2025 22:19:12] "GET /users/1 HTTP/1.1" 200 -
+2025-02-19 22:19:15,149 - INFO - 127.0.0.1 - - [19/Feb/2025 22:19:15] "GET /users HTTP/1.1" 200 -
+2025-02-19 22:23:52,778 - INFO - 127.0.0.1 - - [19/Feb/2025 22:23:52] "GET /users/1 HTTP/1.1" 200 -
+2025-02-19 22:23:54,569 - ERROR -  Error in add_movie route: add_movie.html
+Traceback (most recent call last):
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\app.py", line 135, in add_movie
+    return render_template('add_movie.html', user=user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: add_movie.html
+2025-02-19 22:23:54,577 - INFO - 127.0.0.1 - - [19/Feb/2025 22:23:54] "[35m[1mGET /users/1/add_movie HTTP/1.1[0m" 500 -
+2025-02-19 22:23:58,984 - ERROR -  Error in add_movie route: add_movie.html
+Traceback (most recent call last):
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\app.py", line 135, in add_movie
+    return render_template('add_movie.html', user=user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lea\Documents\CODE\CODIO\movie-project-web\.venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: add_movie.html
+2025-02-19 22:23:58,986 - INFO - 127.0.0.1 - - [19/Feb/2025 22:23:58] "[35m[1mGET /users/1/add_movie HTTP/1.1[0m" 500 -
+2025-02-19 22:27:14,458 - INFO - 127.0.0.1 - - [19/Feb/2025 22:27:14] "GET /users/1/add_movie HTTP/1.1" 200 -
+2025-02-19 22:27:22,392 - INFO - 127.0.0.1 - - [19/Feb/2025 22:27:22] "[35m[1mPOST /users/1/add_movie HTTP/1.1[0m" 500 -
+2025-02-19 22:33:58,119 - INFO - Logging is fully enabled!
+2025-02-19 22:34:46,657 - INFO - Logging is fully enabled!
+2025-02-19 22:34:46,670 - INFO - Logging is fully enabled!
+2025-02-19 22:37:38,849 - INFO - Logging is fully enabled!
+2025-02-19 22:37:38,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-19 22:37:38,904 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-19 22:38:05,009 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:05] "GET / HTTP/1.1" 200 -
+2025-02-19 22:38:09,528 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:09] "GET /users HTTP/1.1" 200 -
+2025-02-19 22:38:33,695 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:33] "[33mGET /add_ser HTTP/1.1[0m" 404 -
+2025-02-19 22:38:38,749 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:38] "GET /add_user HTTP/1.1" 200 -
+2025-02-19 22:38:44,672 - INFO - User 'Beltaine' added successfully.
+2025-02-19 22:38:44,672 - INFO - User 'Beltaine' added successfully.
+2025-02-19 22:38:44,672 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:44] "[32mPOST /add_user HTTP/1.1[0m" 302 -
+2025-02-19 22:38:44,676 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:44] "GET /users HTTP/1.1" 200 -
+2025-02-19 22:38:45,913 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:45] "GET /users/1 HTTP/1.1" 200 -
+2025-02-19 22:38:47,269 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:47] "GET /users/1/add_movie HTTP/1.1" 200 -
+2025-02-19 22:38:51,680 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:51] "[32mPOST /users/1/add_movie HTTP/1.1[0m" 302 -
+2025-02-19 22:38:51,685 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:51] "GET /users/1 HTTP/1.1" 200 -

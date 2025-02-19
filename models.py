@@ -23,6 +23,7 @@ class Movie(db.Model):
     director = Column(String(100))
     year = Column(Integer)
     rating = Column(Float)
+    poster = Column(String(300))
 
     def __repr__(self):
         return f'Film {self.name} from {self.year}'

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.name }}'s Movie List</title>
+</head>
+<body>
+    <h1>{{ user.name }}'s Movie List</h1>
+
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <strong>{{ movie.title }}</strong> ({{ movie.year }}) - {{ movie.director }}
+            <br>Rating: ⭐ {{ movie.rating }}/10
+            <br><img src="{{ movie.poster }}" alt="Movie Poster" style="width:150px;">
+        </li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{{ url_for('add_movie', user_id=user.id) }}">➕ Add a Movie</a>
+    <br>
+    <a href="{{ url_for('list_users') }}">⬅ Back to Users</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Movie</title>
+</head>
+<body>
+    <h1>Add a Movie</h1>
+
+    <form method="POST">
+        <label for="title">Movie Title:</label>
+        <input type="text" name="title" required>
+
+        <button type="submit">Add Movie</button>
+    </form>
+
+    <a href="{{ url_for('user_movies', user_id=user.id) }}">Back to Movies</a>
+</body>
+</html>

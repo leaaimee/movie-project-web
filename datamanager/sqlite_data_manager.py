@@ -1,6 +1,8 @@
 
 from models import db, User, Movie
 from datamanager.data_manager_interface import DataManagerInterface
+import logging
+
 
 class SQLiteDataManager(DataManagerInterface):
     def __init__(self, app, database):
@@ -27,11 +29,11 @@ class SQLiteDataManager(DataManagerInterface):
             print(f"Error getting user movies: {e}")
             return []
 
-    def add_movie(self, user_id, title, director, year, rating):
+    def add_movie(self, user_id, title, director, year, rating, poster):
         try:
             user = User.query.get(user_id)
             if user:
-                movie = Movie(title=title, director=director, year=year, rating=rating)
+                movie = Movie(title=title, director=director, year=year, rating=rating, poster=poster)
                 user.movies.append(movie)
                 self.db.session.add(movie)
                 self.db.session.commit()
@@ -50,7 +52,7 @@ class SQLiteDataManager(DataManagerInterface):
                 movie.title = title
                 movie.director = director
                 movie.year = year
-                movie.rating= rating
+                movie.rating = rating
                 self.db.session.commit()
                 return True
             else:
@@ -74,9 +76,21 @@ class SQLiteDataManager(DataManagerInterface):
             self.db.session.rollback()
             return False
 
-    def get_user(self, username):
+    def get_user(self, user_id):
         try:
-            return User.query.filter_by(name=username).first()
+            return User.query.get(user_id)
         except Exception as e:
             print(f"Error getting user: {e}")
             return None
+
+    def add_user(self, username):
+        try:
+            new_user = User(name=username)
+            self.db.session.add(new_user)
+            self.db.session.commit()
+            logging.info(f"User '{username}' added successfully.")
+            return True
+        except Exception as e:
+            logging.error(f"Error adding user '{username}': {e}")
+            self.db.session.rollback()
+            return False
