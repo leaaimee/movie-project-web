@@ -38,10 +38,11 @@ def extract_movie_data(raw_data):
         director = raw_data.get("Director", "N/A")
         year = raw_data.get("Year", "N/A")
         rating = raw_data.get("imdbRating", "N/A")
+        genre = raw_data.get("Genre", "N/A")
         poster = raw_data.get("Poster", "N/A")
 
         logging.info(f"🎬 Extracted movie data: Title={title}, Year={year}, Rating={rating}, Poster={poster}")
-        return {"Title": title, "Director": director, "Year": year, "Rating": rating, "Poster": poster}
+        return {"Title": title, "Director": director, "Year": year, "Rating": rating, "Genre":genre, "Poster": poster}
 
     except Exception as e:
         logging.exception(f"🔥 Error extracting movie data: {e}")

@@ -136,7 +136,8 @@ def add_movie(user_id):
                 movie_data["Director"],
                 movie_data["Year"],
                 movie_data["Rating"],
-                movie_data["Poster"]
+                movie_data["Poster"],
+                movie_data["Genre"]
             )
 
             if success:

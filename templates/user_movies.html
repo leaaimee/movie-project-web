@@ -10,6 +10,7 @@
         <h2 class="text-xl font-semibold">{{ movie.title }}</h2>
         <p class="text-sm text-gray-400">{{ movie.year }} | 🎬 {{ movie.director }}</p>
         <p class="text-yellow-400 mt-2">⭐ {{ movie.rating }}/10</p>
+        <p class="text-blue-300">📌 Genre: {{ movie.genre }}</p>
         <img src="{{ movie.poster }}" alt="{{ movie.title }}" class="mt-2 rounded-lg shadow-lg">
         <div class="mt-4">
             <a href="{{ url_for('update_movie', user_id=user.id, movie_id=movie.id) }}" 

@@ -37,7 +37,7 @@ class SQLiteDataManager(DataManagerInterface):
             return []
 
 
-    def add_movie(self, user_id, title, director, year, rating, poster):
+    def add_movie(self, user_id, title, director, year, rating, poster, genre):
         """ Adds a movie to a user's list and returns True if successful, otherwise False """
         try:
             user = User.query.get(user_id)
@@ -45,7 +45,7 @@ class SQLiteDataManager(DataManagerInterface):
                 logging.warning(f"️ User {user_id} not found. Cannot add movie.")
                 return False
 
-            movie = Movie(title=title, director=director, year=year, rating=rating, poster=poster)
+            movie = Movie(title=title, director=director, year=year, rating=rating, genre=genre, poster=poster)
             user.movies.append(movie)
             self.db.session.add(movie)
             self.db.session.commit()
