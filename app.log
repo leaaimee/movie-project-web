@@ -397,3 +397,51 @@ jinja2.exceptions.TemplateNotFound: add_movie.html
 2025-02-19 22:38:47,269 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:47] "GET /users/1/add_movie HTTP/1.1" 200 -
 2025-02-19 22:38:51,680 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:51] "[32mPOST /users/1/add_movie HTTP/1.1[0m" 302 -
 2025-02-19 22:38:51,685 - INFO - 127.0.0.1 - - [19/Feb/2025 22:38:51] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 11:45:03,569 - INFO - Logging is fully enabled!
+2025-02-20 11:45:03,619 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-20 11:45:03,619 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 11:45:06,291 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:06] "GET / HTTP/1.1" 200 -
+2025-02-20 11:45:08,155 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-20 11:45:14,424 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:14] "[33mGET /api/posts HTTP/1.1[0m" 404 -
+2025-02-20 11:45:16,617 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:16] "[33mGET /add_movie HTTP/1.1[0m" 404 -
+2025-02-20 11:45:36,885 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:36] "GET /users HTTP/1.1" 200 -
+2025-02-20 11:45:39,350 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:39] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 11:45:41,788 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:41] "GET /users/1/add_movie HTTP/1.1" 200 -
+2025-02-20 11:45:50,230 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:50] "[32mPOST /users/1/add_movie HTTP/1.1[0m" 302 -
+2025-02-20 11:45:50,235 - INFO - 127.0.0.1 - - [20/Feb/2025 11:45:50] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 11:46:04,496 - INFO - 127.0.0.1 - - [20/Feb/2025 11:46:04] "GET /users/1/add_movie HTTP/1.1" 200 -
+2025-02-20 11:46:23,701 - INFO - 127.0.0.1 - - [20/Feb/2025 11:46:23] "[32mPOST /users/1/add_movie HTTP/1.1[0m" 302 -
+2025-02-20 11:46:23,706 - INFO - 127.0.0.1 - - [20/Feb/2025 11:46:23] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 11:46:48,298 - INFO - 127.0.0.1 - - [20/Feb/2025 11:46:48] "[33mGET /users/1/update_movies HTTP/1.1[0m" 404 -
+2025-02-20 11:50:34,998 - INFO - 127.0.0.1 - - [20/Feb/2025 11:50:34] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 11:50:38,932 - INFO - 127.0.0.1 - - [20/Feb/2025 11:50:38] "GET /users/1/update_movie/3 HTTP/1.1" 200 -
+2025-02-20 11:50:46,912 - INFO - 127.0.0.1 - - [20/Feb/2025 11:50:46] "[31m[1mPOST /users/1/update_movie/3 HTTP/1.1[0m" 405 -
+2025-02-20 11:53:07,241 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:07] "[31m[1mPOST /users/1/update_movie/3 HTTP/1.1[0m" 405 -
+2025-02-20 11:53:19,587 - INFO - Logging is fully enabled!
+2025-02-20 11:53:19,633 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-20 11:53:19,633 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 11:53:20,850 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:20] "GET / HTTP/1.1" 200 -
+2025-02-20 11:53:24,314 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:24] "GET /users HTTP/1.1" 200 -
+2025-02-20 11:53:26,678 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:26] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 11:53:28,941 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:28] "GET /users/1/update_movie/3 HTTP/1.1" 200 -
+2025-02-20 11:53:31,861 - INFO - Movie 3 updated successfully.
+2025-02-20 11:53:31,862 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:31] "[32mPOST /users/1/update_movie/3 HTTP/1.1[0m" 302 -
+2025-02-20 11:53:31,866 - INFO - 127.0.0.1 - - [20/Feb/2025 11:53:31] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 12:16:04,393 - INFO - Logging is fully enabled!
+2025-02-20 12:16:04,419 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.178.23:5002
+2025-02-20 12:16:04,419 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-20 12:16:05,891 - INFO - 127.0.0.1 - - [20/Feb/2025 12:16:05] "GET / HTTP/1.1" 200 -
+2025-02-20 12:16:09,375 - INFO - 127.0.0.1 - - [20/Feb/2025 12:16:09] "GET /users HTTP/1.1" 200 -
+2025-02-20 12:16:11,805 - INFO - 127.0.0.1 - - [20/Feb/2025 12:16:11] "GET /users/1 HTTP/1.1" 200 -
+2025-02-20 12:16:17,878 - INFO - Deleted movie The Da Vinci Code (ID 3) for user Beltaine (ID 1)
+2025-02-20 12:16:17,878 - INFO - 127.0.0.1 - - [20/Feb/2025 12:16:17] "[32mPOST /users/1/delete_movie/3 HTTP/1.1[0m" 302 -
+2025-02-20 12:16:17,883 - INFO - 127.0.0.1 - - [20/Feb/2025 12:16:17] "GET /users/1 HTTP/1.1" 200 -

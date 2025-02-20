@@ -17,18 +17,17 @@ def fetch_movie_data(title):
         if response.status_code == 200:
             data = response.json()
             if data.get("Response") == "True":
-                logging.info(f"✅ Successfully fetched data for: {title}")
+                logging.info(f"Successfully fetched data for: {title}")
                 return data
             else:
-                logging.warning(f"⚠️ OMDb API returned an error: {data.get('Error')}")
-                return None
+                logging.warning(f"OMDb API returned an error: {data.get('Error')}")
+                return {"Error": data.get("Error", "Movie not found!")}
 
-        else:
-            logging.error(f"❌ OMDb API request failed with status code {response.status_code}")
-            return None
+        logging.error(f"OMDb API request failed with status code {response.status_code}")
+        return {"Error": f"Request failed with status code {response.status_code}"}
 
     except Exception as e:
-        logging.exception(f"🔥 Unexpected error fetching movie data: {e}")
+        logging.exception(f"Unexpected error fetching movie data: {e}")
         return None
 
 

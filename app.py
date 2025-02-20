@@ -1,6 +1,6 @@
 import os
 import logging
-import sys
+import random
 
 from flask import Flask, render_template, request, redirect, url_for
 
@@ -8,17 +8,11 @@ from models import db
 from datamanager.sqlite_data_manager import SQLiteDataManager
 from omdb_service import fetch_movie_data, extract_movie_data
 
-#Fix logging: Ensure logs go to BOTH file & terminal
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("app.log", mode="a"),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
+    format="%(asctime)s - %(levelname)s - %(message)s")
 
-logging.info("Logging is fully enabled!")
+logging.info("Logging enabled!")
 
 app = Flask(__name__)
 
@@ -39,15 +33,30 @@ db.init_app(app)
 
 data_manager = SQLiteDataManager(app, db)
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", filename="app.log", filemode="a")
+@app.route("/")
+def index():
+    """ Render the home page """
+    random_titles = [
+        "Inception", "The Matrix", "The Dark Knight", "Interstellar",
+        "Pulp Fiction", "Fight Club", "The Godfather", "Blade Runner",
+        "The Crow", "Mad Max", "12 Monkeys", "Terminator 2"
+    ]
 
-@app.route('/')
-def home():
-    return "Welcome to MovieWeb App!"
+    selected_titles = random.sample(random_titles, 6)
+    posters = []
+
+    for title in selected_titles:
+        movie_data = fetch_movie_data(title)
+        if movie_data and "Poster" in movie_data:
+            posters.append(movie_data["Poster"])
+
+    return render_template("index.html", posters=posters)
+
 
 
 @app.route('/users')
 def list_users():
+    """ Display a list of all users """
     try:
         users = data_manager.get_all_users()
         return render_template('users.html', users=users)
@@ -58,6 +67,7 @@ def list_users():
 
 @app.route('/users/<user_id>')
 def user_movies(user_id):
+    """ Show a user's list of favorite movies """
     try:
         user = data_manager.get_user(user_id)
         if not user:
@@ -75,6 +85,7 @@ def user_movies(user_id):
 
 @app.route('/add_user', methods=['GET', 'POST'])
 def add_user():
+    """ Render form and handle new user creation """
     try:
         if request.method == 'POST':
             username = request.form.get('username')
@@ -99,6 +110,7 @@ def add_user():
 
 @app.route('/users/<int:user_id>/add_movie', methods=['GET', 'POST'])
 def add_movie(user_id):
+    """ Render form and handle adding a movie to a user's collection """
     try:
         user = data_manager.get_user(user_id)
         if not user:
@@ -113,8 +125,10 @@ def add_movie(user_id):
 
             # Fetch and extract movie data
             raw_data = fetch_movie_data(title)
-            if not raw_data:
-                return "Could not fetch movie details from OMDb.", 500
+            if not raw_data or "Error" in raw_data:
+                error_message = raw_data.get("Error", "Movie not found. Check the title and try again.")
+                logging.warning(f"Failed to fetch movie details: {error_message}")
+                return render_template('error.html', message=error_message, user_id=user_id), 400
 
             movie_data = extract_movie_data(raw_data)
 
@@ -142,13 +156,75 @@ def add_movie(user_id):
         return "An unexpected error occurred", 500
 
 
-@app.route('/users/<user_id>/update_movie/<movie_id>')
-def update_movie():
-    pass
+@app.route('/users/<user_id>/update_movie/<movie_id>', methods=['GET', 'POST'])
+def update_movie(user_id, movie_id):
+    """ Render form and handle updating a movie's details """
+    try:
+        user = data_manager.get_user(user_id)
+        if not user:
+            logging.warning(f"User {user_id} not found")
+            return "User not found", 404
 
-@app.route('/users/<user_id>/delete_movie/<movie_id>')
-def delete_movie():
-    pass
+        movie = data_manager.get_movie(movie_id)
+        if not movie or movie not in user.movies:
+            logging.warning(f"User {movie_id} not found")
+            return "Movie not found", 404
+
+        if request.method == 'POST':
+            title = request.form.get('title')
+            director = request.form.get('director')
+            year = request.form.get('year')
+            rating = request.form.get('rating')
+
+            if not title or not director or not year or not rating:
+                logging.warning("Missing data in update form")
+                return "All fields are required!", 400
+
+            data_manager.update_movie(movie_id, title, director, year, rating)
+            logging.info(f"Movie {movie_id} updated successfully.")
+            return redirect(url_for('user_movies', user_id=user_id))
+
+        return render_template('update_movie.html', user=user, movie=movie)
+
+    except Exception as e:
+        logging.error(f"Error in update_movie route: {e}")
+        return "An unexpected error occurred", 500
+
+
+@app.route('/users/<user_id>/delete_movie/<movie_id>', methods=['POST'])
+def delete_movie(user_id, movie_id):
+    """ Handle movie deletion from a user's collection """
+    try:
+        user = data_manager.get_user(user_id)
+        if not user:
+            logging.warning(f"User {user_id} not found")
+            return "User not found", 404
+
+        movie = data_manager.get_movie(movie_id)
+        if not movie or movie not in user.movies:
+            logging.warning(f"User {movie_id} not found")
+            return "Movie not found", 404
+
+        data_manager.delete_movie(movie_id)
+        logging.info(f"Deleted movie {movie.title} (ID {movie_id}) for user {user.name} (ID {user_id})")
+        return redirect(url_for("user_movies", user_id=user_id))
+
+    except Exception as e:
+        logging.error(f"Error deleting movie {movie_id} for user {user_id}: {e}")
+        return "An unexpected error occurred", 500
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    logging.warning(f"404 Not Found: {request.url}")
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    logging.error(f"500 Internal Server Error: {str(e)}")
+    return "Something went wrong on our end. We're on it!", 500
+
 
 if __name__ == "__main__":
     print("✅ Running Flask App...")
