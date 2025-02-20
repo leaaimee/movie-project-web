@@ -1,17 +1,39 @@
 from abc import ABC, abstractmethod
 
 class DataManagerInterface(ABC):
+    """ Abstract base class defining the interface for data management. """
+
     @abstractmethod
-    def get_all_users(self): pass
+    def get_all_users(self):
+        """ Retrieve all users from the database """
+        pass
+
     @abstractmethod
-    def get_user_movies(self, user_id): pass
+    def get_user_movies(self, user_id):
+        """ Retrieve all movies associated with a given user """
+        pass
+
     @abstractmethod
-    def add_movie(self, user_id, title, director, year, rating, poster): pass
+    def add_movie(self, user_id, title, director, year, rating, poster):
+        """ Add a movie to a user's collection """
+        pass
+
     @abstractmethod
-    def update_movie(self, movie_id, title, director, year, rating): pass
+    def update_movie(self, movie_id, title, director, year, rating):
+        """ Update details of a movie in the database """
+        pass
+
     @abstractmethod
-    def delete_movie(self, movie_id): pass
+    def delete_movie(self, movie_id):
+        """ Remove a movie from the database """
+        pass
+
     @abstractmethod
-    def get_user(self, user_id): pass
+    def get_user(self, user_id):
+        """ Retrieve a user by their ID """
+        pass
+
     @abstractmethod
-    def get_movie(self, movie_id): pass
+    def get_movie(self, movie_id):
+        """ Retrieve a movie by its ID """
+        pass

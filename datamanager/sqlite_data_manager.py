@@ -1,5 +1,4 @@
-
-from models import db, User, Movie
+from models import User, Movie
 from datamanager.data_manager_interface import DataManagerInterface
 import logging
 
@@ -8,13 +7,12 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-
-
 class SQLiteDataManager(DataManagerInterface):
     def __init__(self, app, database):
         """ Initializes the database manager with a Flask app and database connection """
         self.db = database
         self.app = app
+
 
     def get_all_users(self):
         """ Returns a list of all users or an empty list if an error occurs """
@@ -24,6 +22,7 @@ class SQLiteDataManager(DataManagerInterface):
         except Exception as e:
             logging.error(f" Error getting users: {e}")
             return []
+
 
     def get_user_movies(self, user_id):
         """ Returns a list of movies for a given user or an empty list if the user doesn't exist """
@@ -36,6 +35,7 @@ class SQLiteDataManager(DataManagerInterface):
         except Exception as e:
             logging.error(f" Error getting movies for user {user_id}: {e}")
             return []
+
 
     def add_movie(self, user_id, title, director, year, rating, poster):
         """ Adds a movie to a user's list and returns True if successful, otherwise False """
@@ -55,6 +55,7 @@ class SQLiteDataManager(DataManagerInterface):
             logging.error(f" Error adding movie '{title}' for user {user_id}: {e}")
             self.db.session.rollback()
             return False
+
 
     def update_movie(self, movie_id, title, director, year, rating):
         """ Updates a movie's details and returns True if successful, otherwise False """
@@ -76,6 +77,7 @@ class SQLiteDataManager(DataManagerInterface):
             self.db.session.rollback()
             return False
 
+
     def delete_movie(self, movie_id):
         """ Deletes a movie and returns True if successful, otherwise False """
         try:
@@ -92,6 +94,7 @@ class SQLiteDataManager(DataManagerInterface):
             logging.error(f" Error deleting movie {movie_id}: {e}")
             self.db.session.rollback()
             return False
+
 
     def get_user(self, user_id):
         """ Returns a User object by ID or None if not found """
@@ -114,6 +117,7 @@ class SQLiteDataManager(DataManagerInterface):
         except Exception as e:
             logging.error(f" Error getting movie {movie_id}: {e}")
             return None
+
 
     def add_user(self, username):
         """ Adds a new user and returns True if successful, otherwise False """

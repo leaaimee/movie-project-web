@@ -1,22 +1,33 @@
 {% extends "base.html" %}
 {% block title %}Users{% endblock %}
+
 {% block content %}
 
 <h1 class="text-3xl font-bold mb-4">👥 All Users</h1>
 
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     {% for user in users %}
-    <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+<div class="bg-gray-900 p-4 rounded-lg shadow-lg flex items-center gap-4 p-4">
+    <!-- Check if user has an avatar, otherwise show initials -->
+    {% if user.avatar %}
+        <img src="{{ user.avatar }}" alt="{{ user.name }}" class="w-12 h-12 rounded-full shadow">
+    {% else %}
+        <div class="w-12 h-12 bg-blue-600 text-white flex items-center justify-center rounded-full text-lg font-bold">
+            {{ user.get_initials() }}
+        </div>
+    {% endif %}
+
+    <div>
         <h2 class="text-xl font-semibold">{{ user.name }}</h2>
-        <a href="{{ url_for('user_movies', user_id=user.id) }}" 
+        <a href="{{ url_for('user_movies', user_id=user.id) }}"
            class="mt-2 block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-500 text-center">
            🎬 View Movies
         </a>
     </div>
+</div>
     {% endfor %}
 </div>
 
-<!-- Add User Button -->
 <div class="bg-gray-900 p-4 rounded-lg shadow-lg text-center mt-6">
     <a href="{{ url_for('add_user') }}" 
        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-500">

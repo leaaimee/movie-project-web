@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Integer, Column, String, ForeignKey, Float
+from sqlalchemy import Integer, Column, String, Float
 from sqlalchemy.orm import relationship
 
 db = SQLAlchemy()
@@ -9,7 +9,13 @@ class User(db.Model):
     """ Represents a user in the digital library """
     id = Column(Integer, primary_key=True)
     name = Column(String(100))
+    avatar = Column(String(200), default="")
     movies = relationship('Movie', secondary='user_movies', backref='users')
+
+
+    def get_initials(self):
+        """Generate user initials from their name"""
+        return "".join([part[0] for part in self.name.split()][:2]).upper()
 
     def __repr__(self):
         return f'User name: {self.name}'

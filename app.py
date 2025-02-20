@@ -4,7 +4,7 @@ import random
 
 from flask import Flask, render_template, request, redirect, url_for
 
-from models import db
+from models import db, User
 from datamanager.sqlite_data_manager import SQLiteDataManager
 from omdb_service import fetch_movie_data, extract_movie_data
 
@@ -24,9 +24,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{db_path}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
-# with app.app_context():
-#     db.drop_all()  # ⚠ Deletes all data!
-#     db.create_all()  # Recreates tables
 
 # with app.app_context():
 #     db.create_all()
@@ -51,7 +48,6 @@ def index():
             posters.append(movie_data["Poster"])
 
     return render_template("index.html", posters=posters)
-
 
 
 @app.route('/users')
@@ -93,13 +89,15 @@ def add_user():
                 logging.warning("User tried to add a user without a name.")
                 return "Username is required!", 400
 
-            success = data_manager.add_user(username)
-            if success:
-                logging.info(f"User '{username}' added successfully.")
-                return redirect(url_for('list_users'))
-            else:
-                logging.error(f"Failed to add user '{username}'.")
-                return "Error adding user", 500
+            # Generate avatar URL from initials
+            avatar_url = f"https://ui-avatars.com/api/?name={username}&background=random&color=fff&size=128&rounded=true"
+
+            # Create user with avatar
+            new_user = User(name=username, avatar=avatar_url)
+            db.session.add(new_user)
+            db.session.commit()
+            logging.info(f"User '{username}' added successfully with avatar.")
+            return redirect(url_for('list_users'))
 
         return render_template('add_user.html')
 
@@ -114,16 +112,15 @@ def add_movie(user_id):
     try:
         user = data_manager.get_user(user_id)
         if not user:
-            logging.warning(f"⚠️ User {user_id} not found.")
+            logging.warning(f"User {user_id} not found.")
             return "User not found", 404
 
         if request.method == 'POST':
             title = request.form.get('title')
             if not title:
-                logging.warning("⚠️ Movie title is required.")
+                logging.warning("Movie title is required.")
                 return "Movie title is required!", 400
 
-            # Fetch and extract movie data
             raw_data = fetch_movie_data(title)
             if not raw_data or "Error" in raw_data:
                 error_message = raw_data.get("Error", "Movie not found. Check the title and try again.")
@@ -143,10 +140,10 @@ def add_movie(user_id):
             )
 
             if success:
-                logging.info(f"✅ Movie '{title}' added for user {user_id}.")
+                logging.info(f"Movie '{title}' added for user {user_id}.")
                 return redirect(url_for('user_movies', user_id=user_id))
             else:
-                logging.error(f"❌ Failed to add movie '{title}' for user {user_id}.")
+                logging.error(f"Failed to add movie '{title}' for user {user_id}.")
                 return "Error adding movie", 500
 
         return render_template('add_movie.html', user=user)
