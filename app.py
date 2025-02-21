@@ -129,7 +129,6 @@ def add_movie(user_id):
 
             movie_data = extract_movie_data(raw_data)
 
-            # Store the fetched details
             success = data_manager.add_movie(
                 user_id,
                 movie_data["Title"],

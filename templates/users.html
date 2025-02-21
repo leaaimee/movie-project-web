@@ -8,14 +8,9 @@
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     {% for user in users %}
 <div class="bg-gray-900 p-4 rounded-lg shadow-lg flex items-center gap-4 p-4">
-    <!-- Check if user has an avatar, otherwise show initials -->
-    {% if user.avatar %}
-        <img src="{{ user.avatar }}" alt="{{ user.name }}" class="w-12 h-12 rounded-full shadow">
-    {% else %}
-        <div class="w-12 h-12 bg-blue-600 text-white flex items-center justify-center rounded-full text-lg font-bold">
-            {{ user.get_initials() }}
-        </div>
-    {% endif %}
+    <div class="w-12 h-12 bg-blue-600 text-white flex items-center justify-center rounded-full text-lg font-bold">
+        {{ user.get_initials() }}
+    </div>
 
     <div>
         <h2 class="text-xl font-semibold">{{ user.name }}</h2>

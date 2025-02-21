@@ -98,3 +98,13 @@ This project is open-source and available under the MIT License.
 
 💻 "Code meets cinema—built by a movie enthusiast for movie enthusiasts! 🎥✨"
 
+
+## 📸 Screenshots
+
+### 🎬 Homepage
+![Homepage](screenshots/movie-project-web_screenshot_homepage_01.jpg)
+
+### 🎞️ User Movies Page
+![User Movies](screenshots/movie-project-web_screenshot_user_02.jpg)
+
+![User Movies](screenshots/movie-project-web_screenshot_user_03jpg)
